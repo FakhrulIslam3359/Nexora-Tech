@@ -1,146 +1,560 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore practical tech gadget guides, comparisons, and buying tips from Nexora Tech.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nexora Tech offers practical tech gadget guides, comparisons, and buying tips to help you make informed decisions.">
+  <meta name="theme-color" content="#172554">
   <title>Nexora Tech | Smart Gadgets, Smarter Choices</title>
+
   <style>
-    :root{--navy:#172554;--blue:#2563eb;--ink:#172033;--muted:#64748b;--line:#e2e8f0;--bg:#f8fafc;--white:#fff}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
-    a{color:inherit} .wrap{width:min(1100px,92%);margin:auto}
-    header{background:var(--navy);color:#fff;padding:18px 0}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
-    .brand{font-weight:800;font-size:1.25rem;letter-spacing:.04em;text-decoration:none}
-    nav{display:flex;gap:18px;flex-wrap:wrap}nav a{text-decoration:none;color:#dbeafe;font-size:.95rem}
-    .hero{background:linear-gradient(135deg,#172554,#1d4ed8);color:#fff;padding:64px 0}
-    .hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center}
-    .eyebrow{color:#bfdbfe;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}
-    h1{font-size:clamp(2.1rem,5vw,3.8rem);line-height:1.08;margin:12px 0 18px}
-    .hero p{color:#e0e7ff;max-width:600px}
-    .btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;padding:11px 16px;border-radius:10px;margin:8px 8px 0 0}
-    .btn.light{background:#fff;color:var(--navy)}.hero-card{background:#fff;color:var(--ink);border-radius:18px;padding:24px;box-shadow:0 16px 40px #0f172a33}
-    .hero-card .emoji{font-size:3rem}.hero-card h2{margin:8px 0}
-    section{padding:48px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;margin-bottom:22px}
-    h2{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.2;margin:0 0 8px}.muted{color:var(--muted)}
-    .categories,.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .tile,.product,.info{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px}
-    .tile .icon{font-size:2rem}.tile h3,.product h3{margin:8px 0}
-    .product .art{height:135px;border-radius:12px;background:linear-gradient(135deg,#dbeafe,#eff6ff);display:grid;place-items:center;font-size:3.4rem}
-    .product p{color:var(--muted);font-size:.95rem}.product a{font-weight:700;color:var(--blue);text-decoration:none}
-    .notice{background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;padding:16px;color:#1e3a8a;font-size:.92rem}
-    .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    footer{background:#0f172a;color:#cbd5e1;padding:30px 0}footer a{color:#fff}
-    .footlinks{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
-    @media(max-width:720px){.hero-grid,.two{grid-template-columns:1fr}.categories,.cards{grid-template-columns:1fr}.hero{padding:44px 0}nav{gap:12px}.hero-card{max-width:420px}}
+    :root {
+      --navy: #172554;
+      --blue: #2563eb;
+      --ink: #172033;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --bg: #f8fafc;
+      --white: #ffffff;
+    }
 
-/* Better mobile layout */
-@media (max-width: 600px) {
-  header {
-    padding: 14px 0;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  .brand {
-    font-size: 1.1rem;
-  }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 20px;
+    }
 
-  nav {
-    gap: 8px 14px;
-    flex-wrap: wrap;
-  }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.7;
+      overflow-wrap: break-word;
+    }
 
-  nav a {
-    font-size: 0.85rem;
-  }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
 
-  .hero {
-    padding: 36px 0;
-  }
+    a {
+      color: inherit;
+    }
 
-  .hero p {
-    font-size: 1rem;
-  }
+    .wrap {
+      width: min(1100px, 92%);
+      margin-inline: auto;
+    }
 
-  .btn {
-    padding: 10px 13px;
-    font-size: 0.95rem;
-  }
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 18px 0;
+    }
 
-  section {
-    padding: 32px 0;
-  }
-}
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #dbeafe;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover,
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #172554, #1d4ed8);
+      color: var(--white);
+      padding: 64px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: #bfdbfe;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 5vw, 3.8rem);
+      line-height: 1.12;
+      margin: 12px 0 18px;
+    }
+
+    .hero p {
+      color: #e0e7ff;
+      max-width: 600px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--blue);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+      padding: 11px 16px;
+      border-radius: 10px;
+      margin: 8px 8px 0 0;
+    }
+
+    .btn.light {
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .hero-card {
+      background: var(--white);
+      color: var(--ink);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 16px 40px #0f172a33;
+    }
+
+    .hero-card .emoji {
+      font-size: 3rem;
+    }
+
+    .hero-card h2 {
+      margin: 8px 0;
+    }
+
+    section {
+      padding: 48px 0;
+    }
+
+    .section-head {
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      line-height: 1.25;
+      margin: 0 0 8px;
+    }
+
+    h3 {
+      line-height: 1.35;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .categories,
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .tile,
+    .product,
+    .info {
+      min-width: 0;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .tile .icon {
+      font-size: 2rem;
+    }
+
+    .tile h3,
+    .product h3 {
+      margin: 8px 0;
+    }
+
+    .product .art {
+      min-height: 125px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #dbeafe, #eff6ff);
+      display: grid;
+      place-items: center;
+      font-size: 3.4rem;
+    }
+
+    .product p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .text-link {
+      display: inline-block;
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+    }
+
+    .two {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .notice {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 12px;
+      padding: 18px;
+      color: #1e3a8a;
+    }
+
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 30px 0;
+    }
+
+    footer a {
+      color: var(--white);
+    }
+
+    .footlinks {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 12px 0;
+    }
+
+    footer small {
+      display: block;
+      margin-top: 16px;
+    }
+
+    /* Tablet layout */
+    @media (max-width: 800px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .categories,
+      .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero {
+        padding: 48px 0;
+      }
+    }
+
+    /* Mobile layout */
+    @media (max-width: 600px) {
+      header {
+        padding: 14px 0;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .brand {
+        font-size: 1.15rem;
+      }
+
+      nav {
+        width: 100%;
+        gap: 8px 16px;
+      }
+
+      nav a {
+        font-size: 0.88rem;
+      }
+
+      .hero {
+        padding: 36px 0;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 9vw, 2.7rem);
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        padding: 10px 13px;
+        font-size: 0.92rem;
+      }
+
+      section {
+        padding: 32px 0;
+      }
+
+      .categories,
+      .cards,
+      .two {
+        grid-template-columns: 1fr;
+      }
+
+      .tile,
+      .product,
+      .info,
+      .hero-card {
+        padding: 18px;
+      }
+
+      .footlinks {
+        gap: 10px 16px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <div class="wrap nav">
       <a class="brand" href="#home">◈ NEXORA TECH</a>
+
       <nav aria-label="Main navigation">
-        <a href="#categories">Categories</a><a href="#guides">Buying Guides</a><a href="#about">About</a><a href="#contact">Contact</a>
+        <a href="#categories">Categories</a>
+        <a href="#guides">Buying Guides</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
+
   <main>
     <section class="hero" id="home">
       <div class="wrap hero-grid">
         <div>
-          <div class="eyebrow">Tech made easier</div>
+          <div class="eyebrow">Technology made easier</div>
           <h1>Smart Gadgets.<br>Smarter Choices.</h1>
-          <p>Explore easy-to-understand gadget guides, feature comparisons, and practical tips before choosing your next tech accessory.</p>
-          <a class="btn light" href="#categories">Explore categories →</a>
-          <a class="btn" href="#guides">Read buying guides</a>
+          <p>
+            Explore practical gadget guides, understand important features,
+            and learn what to compare before choosing your next tech accessory.
+          </p>
+          <a class="btn light" href="#categories">Explore Categories</a>
+          <a class="btn" href="#guides">Read Buying Guides</a>
         </div>
+
         <div class="hero-card">
-          <div class="emoji">🎧</div>
-          <h2>Choose with confidence</h2>
-          <p>Learn what features matter, what to compare, and which questions to ask before you buy.</p>
-          <small class="muted">Independent educational content • Product links can be added later</small>
+          <div class="emoji" aria-hidden="true">🎧</div>
+          <h2>Choose with Confidence</h2>
+          <p>
+            Learn which features matter, what to compare, and which questions
+            to ask before making a purchase.
+          </p>
+          <small class="muted">
+            Independent educational content. Product links will be added when available.
+          </small>
         </div>
       </div>
     </section>
 
     <section id="categories">
       <div class="wrap">
-        <div class="section-head"><div><h2>Explore Categories</h2><p class="muted">Start with the tech you use every day.</p></div></div>
+        <div class="section-head">
+          <h2>Explore Categories</h2>
+          <p class="muted">Start with the technology you use every day.</p>
+        </div>
+
         <div class="categories">
-          <article class="tile"><div class="icon">🎧</div><h3>Earbuds & Audio</h3><p class="muted">Sound quality, comfort, battery life and call features.</p></article>
-          <article class="tile"><div class="icon">⌚</div><h3>Smartwatches</h3><p class="muted">Compatibility, display, battery and everyday functions.</p></article>
-          <article class="tile"><div class="icon">🔋</div><h3>Charging & Power</h3><p class="muted">Charging standards, portability and device compatibility.</p></article>
+          <article class="tile">
+            <div class="icon" aria-hidden="true">🎧</div>
+            <h3>Earbuds &amp; Audio</h3>
+            <p class="muted">
+              Learn about sound quality, comfort, battery life, and call features.
+            </p>
+          </article>
+
+          <article class="tile">
+            <div class="icon" aria-hidden="true">⌚</div>
+            <h3>Smartwatches</h3>
+            <p class="muted">
+              Compare phone compatibility, displays, battery life, and useful functions.
+            </p>
+          </article>
+
+          <article class="tile">
+            <div class="icon" aria-hidden="true">🔋</div>
+            <h3>Charging &amp; Power</h3>
+            <p class="muted">
+              Understand charging standards, portability, and device compatibility.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="guides">
       <div class="wrap">
-        <div class="section-head"><div><h2>Beginner Buying Guides</h2><p class="muted">Starter article ideas to replace with your own researched content.</p></div></div>
-        <div class="cards">
-          <article class="product"><div class="art">🎧</div><h3>How to Choose Wireless Earbuds</h3><p>Compare fit, sound, microphone quality, battery life and warranty before buying.</p><a href="#contact">Read guide (draft) →</a></article>
-          <article class="product"><div class="art">⌚</div><h3>Smartwatch Features Explained</h3><p>Understand phone compatibility, notifications, battery life and water-resistance ratings.</p><a href="#contact">Read guide (draft) →</a></article>
-          <article class="product"><div class="art">🔌</div><h3>What to Check in a Charger</h3><p>Check supported charging standards, output, cable quality and device requirements.</p><a href="#contact">Read guide (draft) →</a></article>
+        <div class="section-head">
+          <h2>Beginner Buying Guides</h2>
+          <p class="muted">
+            Practical tips to help you make more informed choices.
+          </p>
         </div>
+
+        <div class="cards">
+          <article class="product">
+            <div class="art" aria-hidden="true">🎧</div>
+            <h3>How to Choose Wireless Earbuds</h3>
+            <p>
+              Compare fit, sound quality, microphone performance, battery life,
+              warranty, and compatibility.
+            </p>
+            <a class="text-link" href="#earbuds-guide">View key tips ↓</a>
+          </article>
+
+          <article class="product">
+            <div class="art" aria-hidden="true">⌚</div>
+            <h3>Smartwatch Features Explained</h3>
+            <p>
+              Understand phone compatibility, notifications, battery life,
+              and water-resistance ratings.
+            </p>
+            <a class="text-link" href="#watch-guide">View key tips ↓</a>
+          </article>
+
+          <article class="product">
+            <div class="art" aria-hidden="true">🔌</div>
+            <h3>What to Check in a Charger</h3>
+            <p>
+              Check supported charging standards, power output, cable quality,
+              and your device requirements.
+            </p>
+            <a class="text-link" href="#charger-guide">View key tips ↓</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="earbuds-guide">
+      <div class="wrap info">
+        <h2>Wireless Earbuds: What to Compare</h2>
+        <p>
+          Before choosing earbuds, check comfort, sound preferences, microphone
+          quality, battery life, charging case, device compatibility, return
+          policy, and warranty. Features and performance vary by model, so
+          verify the manufacturer's specifications before purchasing.
+        </p>
+      </div>
+    </section>
+
+    <section id="watch-guide">
+      <div class="wrap info">
+        <h2>Smartwatches: Important Features</h2>
+        <p>
+          Check whether the watch works with your phone, which notifications
+          it supports, how long the battery lasts, and whether its apps meet
+          your needs. Read the manufacturer's water-resistance guidance before
+          using a watch around water.
+        </p>
+      </div>
+    </section>
+
+    <section id="charger-guide">
+      <div class="wrap info">
+        <h2>Chargers: Safety and Compatibility</h2>
+        <p>
+          Check the required connector, supported charging standard, power
+          output, and device manufacturer's recommendations. Choose products
+          from reputable sellers and verify applicable safety certifications.
+        </p>
       </div>
     </section>
 
     <section id="about">
       <div class="wrap two">
-        <div class="info"><h2>About Nexora Tech</h2><p>Our goal is to make technology easier to understand with clear explanations and useful product comparisons. We aim to publish original, helpful content for readers.</p></div>
-        <div class="info"><h2>Affiliate Disclosure</h2><p>Some future links may be affiliate links. If you buy through an eligible link, the site may earn a commission at no extra cost to you. We will clearly label affiliate links and only publish claims we can support.</p></div>
+        <div class="info">
+          <h2>About Nexora Tech</h2>
+          <p>
+            Our goal is to make technology easier to understand through clear
+            explanations, practical tips, and useful product comparisons.
+            We aim to publish helpful, original content for our readers.
+          </p>
+        </div>
+
+        <div class="info" id="disclosure">
+          <h2>Affiliate Disclosure</h2>
+          <p>
+            Nexora Tech does not currently provide affiliate purchase links.
+            If we join an affiliate program in the future, qualifying links
+            will be clearly disclosed. We may earn a commission from eligible
+            purchases at no additional cost to the buyer.
+          </p>
+        </div>
       </div>
     </section>
 
     <section id="contact">
       <div class="wrap">
-        <div class="notice"><strong>Before launch:</strong> Replace draft article links, add a real contact method, publish a privacy policy, verify every product claim, and add approved affiliate links only after joining a program and reviewing its rules.</div>
+        <div class="notice">
+          <strong>Contact and privacy information</strong>
+          <p>
+            A contact method and a privacy policy still need to be added before
+            the site is fully ready for visitors. No contact details are listed
+            here until a real contact method is available.
+          </p>
+        </div>
       </div>
     </section>
   </main>
+
   <footer>
     <div class="wrap">
       <strong>NEXORA TECH</strong>
       <p>Practical guides for smarter tech choices.</p>
-      <div class="footlinks"><a href="#about">About</a><a href="#contact">Contact</a><a href="#contact">Privacy Policy (to add)</a><a href="#contact">Affiliate Disclosure</a></div>
-      <small>© <span id="year">2026</span> Nexora Tech. Product names and trademarks belong to their respective owners.</small>
+
+      <div class="footlinks">
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#disclosure">Affiliate Disclosure</a>
+      </div>
+
+      <small>
+        &copy; 2026 Nexora Tech. Product names and trademarks belong to their respective owners.
+      </small>
     </div>
   </footer>
 </body>
